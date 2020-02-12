@@ -1,0 +1,52 @@
+{
+  "author": {
+    "name": "netop://ウエハ",
+    "url": "https://webb.page"
+  },
+  "dependencies": {
+    "@webb/console": "^2020.2.11"
+  },
+  "description": "Pretty good email validation",
+  "devDependencies": {
+    "@webb/config-prettier": "^2020.2.1-0.3",
+    "@webb/test": "^2020.2.11",
+    "chronver": "^2019.10.2-7.1",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5",
+    "updates": "^9.3.3"
+  },
+  "homepage": "https://code.webb.page/Webb/validate-email",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm run pretty && npm run increment && git add -A :/"
+    }
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "@webb/validate-email",
+  "prettier": "@webb/config-prettier",
+  "publishConfig": {
+    "registry": "https://npm.inc.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://code.webb.page/Webb/validate-email"
+  },
+  "scripts": {
+    "build": "npm run cleanup && tsc",
+    "cleanup": "del './dist'",
+    "increment": "chronver --increment package",
+    "pretty": "prettier --write 'dist/**/*.js' 'dist/**/*.ts'",
+    "test": "run-s test:*",
+    "test:dependencies": "updates --update ./",
+    "test:typescript": "tsc",
+    "test:assert": "tsc && ts-node test/index.ts"
+  },
+  "types": "dist/index.d.ts",
+  "version": "2020.02.12"
+}
