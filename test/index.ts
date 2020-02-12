@@ -9,7 +9,7 @@ import assert from "assert";
 
 import Test from "@webb/test";
 
-//  U T I L
+//  U T I L S
 
 import { emailRegex } from "../dist";
 import validateEmail from "../dist";
