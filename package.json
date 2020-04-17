@@ -4,23 +4,23 @@
     "url": "https://webb.page"
   },
   "dependencies": {
-    "@webb/console": "^2020.3.29"
+    "@webb/console": "^2020.4.15"
   },
   "description": "Pretty good email validation",
   "devDependencies": {
-    "@webb/config-prettier": "^2020.3.29",
-    "@webb/test": "^2020.3.29",
+    "@webb/config-prettier": "^2020.4.16",
+    "@webb/test": "^2020.4.15",
     "chronver": "^2020.3.9",
     "del-cli": "^3.0.0",
     "eslint": "^6.8.0",
-    "husky": "^4.2.3",
+    "husky": "^4.2.5",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.2",
-    "ts-node": "^8.8.1",
+    "prettier": "^2.0.4",
+    "ts-node": "^8.8.2",
     "typescript": "^3.8.3",
-    "updates": "^10.2.6"
+    "updates": "^10.2.7"
   },
-  "homepage": "https://code.webb.page/Webb/validate-email",
+  "homepage": "https://github.com/NetOperatorWibby/validate-email",
   "husky": {
     "hooks": {
       "pre-commit": "npm run build && npm run pretty && npm run increment && git add -A :/"
@@ -32,7 +32,7 @@
   "prettier": "@webb/config-prettier",
   "repository": {
     "type": "git",
-    "url": "https://code.webb.page/Webb/validate-email"
+    "url": "https://github.com/NetOperatorWibby/validate-email"
   },
   "scripts": {
     "build": "npm run cleanup && tsc",
@@ -45,5 +45,5 @@
     "test:assert": "tsc && ts-node test/index.ts"
   },
   "types": "dist/index.d.ts",
-  "version": "2020.03.29"
+  "version": "2020.04.16"
 }
